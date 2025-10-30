@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support | MANA.WEB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      background-size: cover;
+      color: #fff;
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      color: #00ff00;
+      font-size: 24px;
+    }
+
+    h2 {
+      color: #00ff00;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.5;
+      font-size: 13px;
+      padding-bottom: 100px;
+    }
+
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      padding-bottom: 24px;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid #00ff00;
+      border-radius: 10px;
+      width: 260px;
+      padding: 30px 80px 30px 80px;
+      box-shadow: 0 0 10px #00ff00;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+      .avatar {
+      width: 200px;
+      height: 250px;
+      margin: 0 auto 15px;
+      border-radius: 8px;
+      overflow: hidden; /* corta o excesso da imagem */
+      border: 2px solid #00ff00;
+      box-shadow: 0 0 10px #00ff00;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* garante que a imagem preencha todo o espaço */
+    }
+
+    .card h3 {
+      font-size: 12px;
+      margin: 10px 0;
+    }
+
+    .card p {
+      font-size: 10px;
+      color: #aaa;
+      margin: 0;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 8px;
+      color: #00ff00;
+    }
+
+    .btn-back {
+      background-color: #00ff00;
+      color: #000;
+      border: none;
+      padding: 12px 25px;
+      font-family: 'VT323', monospace;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00ff00;
+      text-align: center;
+      text-decoration: none;
+}
+
+  .btn-back:hover {
+    background-color: #000;
+    color: #00ff66;
+    box-shadow: 0 0 15px #00ff00;
+    text-decoration: none;
+ }
+
+  .btn-back:hover a {
+    text-decoration: none;
+    color: inherit;  /* usa a mesma cor do botão */
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+    
+  </style>
+</head>
+<body>
+  <h1>MANA.WEB</h1>
+  <h2>SUPPORT</h2>
+  <p>Precisa de ajuda? Confira abaixo as informações de contato das desenvolvedoras do projeto.</p>
+
+  <section class="contact-cards">
+    <div class="card">
+      <div class="avatar">
+        <img src="../asset/img/mariah.jpeg" alt="Avatar de Mariah">
+      </div>
+      <h3>Mariah Gottardo</h3>
+      <p>Frontend Developer</p>
+      <span class="email">mariah.gottardo@escola.pr.gov.br</span>
+    </div>
+
+    <div class="card">
+      <div class="avatar">
+        <img src="../asset/img/stephany.jpeg" alt="Avatar de Stephany">
+      </div>
+      <h3>Stephany Hanna</h3>
+      <p>Backend Developer</p>
+      <span class="email">stephany.pantoja@escola.pr.gov.br</span>
+    </div>
+  </section>
+
+      <a href="../index.html" class="btn-back">Voltar</a>
+  
+</body>
+</html>

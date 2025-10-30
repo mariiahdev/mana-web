@@ -1,0 +1,166 @@
+/* Logo unificado estilo Feeling Lucky */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.logo-header {
+  position: absolute;   /* canto superior direito */
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  font-family: 'VT323', monospace;
+  z-index: 100;         /* garante que fique acima dos corações */
+}
+
+.logo-header h1 {
+  color: limegreen;      /* cor principal */
+  font-size: 5em;
+  line-height: 0.8em;
+  margin: 0;
+  padding-top: 0;
+}
+
+.logo-header h1 span {
+  color: #ffffff;        /* cor diferente do MANA */
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.1); /* aumenta suavemente no hover */
+}
+
+
+/* === BASE === */
+body {
+  background-color: #ffe6e6;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+/* === CABEÇALHO === */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 5vw, 3rem);
+  margin-top: clamp(20px, 5vh, 60px);
+  flex-wrap: wrap; /* permite quebrar linha em telas pequenas */
+}
+
+h1 {
+  color: #b3003b;
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px #ffb6c1;
+  margin: 0;
+}
+
+.cupid {
+  width: 150px;
+}
+
+.cupid img {
+  width: 100%;
+  image-rendering: pixelated;
+}
+
+.cupid.right img {
+  transform: scaleX(-1);
+}
+
+/* === CORAÇÕES === */
+.hearts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  margin: 100px 0;
+}
+
+.heart-box {
+  position: relative;           /* necessário pro input se posicionar dentro */
+  display: inline-block;
+}
+
+.heart-box img {
+  width: 500px;                 /* tamanho do coração */
+  height: auto;
+  image-rendering: pixelated;
+  display: block;
+}
+
+/* === INPUT SOBRE O CORAÇÃO === */
+.heart-box input {
+  position: absolute;
+  top: 50%;                     /* centraliza verticalmente */
+  left: 50%;                    /* centraliza horizontalmente */
+  transform: translate(-50%, -50%);  /* ajuste perfeito ao centro */
+  width: 70%;                   /* largura relativa ao coração */
+  padding: 8px;
+  border: 2px solid #b3003b;
+  border-radius: 8px;
+  background-color: rgba(255, 230, 230, 0.8); /* levemente transparente */
+  color: #b3003b;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+  transition: 0.2s;
+}
+
+.heart-box input:focus {
+  background-color: rgba(255, 214, 214, 0.9);
+  box-shadow: 0 0 10px #ffb6c1;
+}
+
+
+/* === BOTÃO === */
+button {
+  background-color: #ffd6d6;
+  color: #b3003b;
+  border: 3px solid #b3003b;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(16px, 2vw, 24px);
+  padding: 1em 3em;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 2px 2px #ffb6c1;
+  transition: all 0.2s ease;
+  margin-bottom: clamp(40px, 8vh, 80px);
+}
+
+button:hover {
+  background-color: #b3003b;
+  color: #ffe6e6;
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: clamp(24px, 6vw, 40px);
+  }
+
+  .hearts {
+    flex-direction: column;
+    gap: 40px;
+    margin: 60px 0;
+  }
+
+  button {
+    font-size: clamp(14px, 4vw, 18px);
+    padding: 10px 30px;
+  }
+}

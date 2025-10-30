@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FEELING LUCKY</title>
+
+  <!-- Estilos (CSS interno) -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+    body {
+      background-color: black;
+      text-align: center;
+      font-family: VT323, monospace;
+    }
+
+    header {
+  position: absolute;  /* permite posicionar livremente */
+  top: 20px;           /* distância do topo */
+  right: 20px;         /* distância da direita */
+  text-align: right;
+  font-family: VT323, 'monospace';
+}
+
+header h1 {
+  color: limegreen;
+  font-size: 5em;
+  line-height: 0.8em;
+  margin: 0;           /* remove margem extra */
+  padding-top: 0%;
+}
+
+header h1 span {
+  color: #ffffff;
+}
+    .logo-link {
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        
+    }
+
+    .logo-link {
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .logo-link:hover {
+        transform: scale(1.1); /* aumenta um pouco */
+    }
+
+    h1 {
+      font-size: 100px;
+      margin-top: 20px;
+      color: white;
+      padding-top: 30px;
+      padding-bottom: 50px;
+    }
+
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      background: black;
+      color: rgb(255, 255, 255);
+      border: none;
+    }
+
+    img {
+      width: 500px;
+      transition: transform 1s;
+      padding-top: 20px;
+    }
+
+    .rolling {
+      animation: spin 1s ease-out forwards;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(1440deg); } /* 4 voltas */
+    }
+
+    #resultado {
+      font-size: 65px;
+      color: white;
+    }
+
+    #rollBtn {
+      background-color: #f10707;
+      color: rgb(0, 0, 0);
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    #rollBtn:hover {
+      background-color: limegreen;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="../index.html" class="logo-link">
+        <h1><span>MANA</span><br>.WEB</h1>
+    </a>
+  </header>
+
+  <h1>GET LUCKY!</h1>
+  <button id="rollBtn">ROLL THE DICE</button>
+  <br>
+  <img id="dice" src="../asset/img/dice.png" alt="dice">
+  <p id="resultado"></p>
+
+  <!-- Script (JS interno) -->
+  <script>
+    const dice = document.getElementById('dice');
+    const btn = document.getElementById('rollBtn');
+    const resultado = document.getElementById('resultado');
+
+    btn.addEventListener('click', () => { 
+      resultado.textContent = "";
+
+      dice.classList.remove('rolling');
+      void dice.offsetWidth; // força reflow
+      dice.classList.add('rolling');
+      
+      // número aleatório de 1 a 20
+      const numero = Math.floor(Math.random() * 20) + 1;
+
+      dice.addEventListener('animationend', function mostrarResultado() {
+        resultado.textContent = "YOU GOT: " + numero;
+        dice.removeEventListener('animationend', mostrarResultado);
+      });
+    });
+  </script>
+</body>
+</html>

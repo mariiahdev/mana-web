@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers | MANA.WEB</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <style> 
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            overflow-x: hidden;
+        }        
+
+        h1 {
+            margin-top: 40px;
+            color: #00ff00;
+            font-size: 24px;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.5;
+            font-size: 13px;
+            padding-bottom: 40px;
+        }
+
+        .developers-cards {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 200px;
+            margin-bottom: 100px;
+        }
+
+        .card {
+            position: relative;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            width: 550px;
+            height: 600px;
+            box-shadow: 0 0 10px #00ff00;
+            transition: transform 0.2s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            position: absolute;
+            top: -50px; /* ajusta a altura vertical */
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            background: linear-gradient(135deg #00ff00, #003300);
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 12px;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 10px;
+            color: #aaa;
+            margin: 0;
+        }
+
+        .card-content span {
+            display: block;
+            width: 85%;               /* mantém margens laterais confortáveis */
+            margin: 20px auto 0;      /* centraliza horizontalmente dentro do card */
+            text-align: justify;      /* mantém alinhamento das linhas */
+            text-align-last: center;  /* centraliza a última linha */
+            line-height: 1.6;         /* espaçamento entre linhas */
+            color: #ccc;              /* cor neutra para leitura */
+            font-size: 12px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            padding: 12px 25px;
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 10px #00ff00;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 50px;
+        }
+
+        .btn-back:hover {
+            background-color: #000;
+            color: #00ff66;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        .btn-back:hover a {
+            color: inherit;  /* usa a mesma cor do botão */
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>MANA.WEB</h1>
+    <h2>DEVELOPERS</h2>
+    <p>Confira abaixo o currículo das desenvolvedoras do MANA.WEB</p>
+
+    <section class="developers-cards">
+        <div class="card">
+            <div class="card-content">
+                <div class="avatar"></div>
+                <h3>Mariah gottardo</h3>
+                <p>Frontend Developer</p>
+                <span>What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-content">
+                <div class="avatar"></div>
+                <h3>Stephany Hanna</h3>
+                <p>Backend Developer</p>
+                <span>What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span>
+            </div>
+        </div>
+    </section>
+
+        <a href="../index.html" class="btn-back">Voltar</a>
+</body>
+</html>

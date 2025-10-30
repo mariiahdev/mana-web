@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANA.WEB | FAQ</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'Share Tech Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .faq-wrapper {
+    background-color: #050505;
+    border: 2px solid #00ff00;
+    border-radius: 12px;
+    padding: 25px 150px 200px 150px;
+    width: 100%;
+    max-width: 80%;
+    box-shadow: 0 0 25px #00ff00;
+    height: 700px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .title {
+    font-size: 50px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-family: VT323, monospace;
+  }
+
+  .subtitle {
+    color: #00ff00;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: VT323, monospace;
+  }
+
+  .faq-item {
+    border: 1px solid #00ff00;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px transparent;
+  }
+
+  .faq-item:hover {
+    box-shadow: 0 0 12px #00ff00;
+  }
+
+  .faq-question {
+    background-color: #000;
+    padding: 18px;
+    cursor: pointer;
+    text-align: left;
+    color: #00ff00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+
+  .faq-question:hover {
+    background-color: #00ff00;
+    color: #000;
+    box-shadow: 0 0 15px #00ff00;
+  }
+
+  .faq-answer {
+    background-color: #111;
+    color: #ccc;
+    padding: 16px 22px;
+    display: none;
+    text-align: left;
+    border-top: 1px solid #00ff00;
+    font-size: 14px;
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+    animation: open 0.4s ease;
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+  }
+
+  .faq-item.active .arrow {
+    transform: rotate(180deg);
+  }
+
+  @keyframes open {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  button {
+  background-color: #00ff00;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #00ff00;
+  text-align: center;
+}
+
+  button:hover {
+  background-color: #000;
+  color: #00ff66;
+  box-shadow: 0 0 15px #00ff00;
+  text-decoration: none;
+ }
+
+button a {
+  text-decoration: none;
+  color: inherit;  /* usa a mesma cor do botão */
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+  footer {
+  position: absolute;
+  bottom: 10px;        /* distancia do fundo da caixa */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #00ff00;
+  font-size: 12px;
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+  <div class="faq-wrapper">
+    <div class="header">
+      <div class="title">MANA<br>.WEB</div>
+      <div class="subtitle">FAQ</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        JDFHGJKLHGFKLHGDLFHDÇGHLGHDFGHSDFGHSDKL?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">--› XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        LOREM IPSUM DOLOR SIT AMET CONSECTETUR?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">--› Resposta exemplo simulando conteúdo da FAQ.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        LOREM IPSUM DOLOR SIT AMET CONSECTETUR?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">--› Resposta exemplo simulando conteúdo da FAQ.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        LOREM IPSUM DOLOR SIT AMET CONSECTETUR?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">--› Resposta exemplo simulando conteúdo da FAQ.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        LOREM IPSUM DOLOR SIT AMET CONSECTETUR?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">--› Resposta exemplo simulando conteúdo da FAQ.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        LOREM IPSUM DOLOR SIT AMET CONSECTETUR?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">--› Resposta exemplo simulando conteúdo da FAQ.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        COMO FUNCIONA O SUPORTE DA MANA.WEB?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">--› O suporte está disponível via aba "Suporte" no menu principal.</div>
+    </div>
+
+    <button>
+      <a href="../index.html">VOLTAR</a>
+    </button>
+
+  </div>
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+      faqItems.forEach(i => {
+        if (i !== item) i.classList.remove('active');
+      });
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
