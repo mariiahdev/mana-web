@@ -1,17 +1,17 @@
-/* Logo unificado estilo Feeling Lucky */
+
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 .logo-header {
-  position: absolute;   /* canto superior direito */
+  position: absolute;   
   top: 20px;
   right: 20px;
   text-align: right;
   font-family: 'VT323', monospace;
-  z-index: 100;         /* garante que fique acima dos corações */
+  z-index: 100;         
 }
 
 .logo-header h1 {
-  color: limegreen;      /* cor principal */
+  color: limegreen;      
   font-size: 5em;
   line-height: 0.8em;
   margin: 0;
@@ -19,7 +19,7 @@
 }
 
 .logo-header h1 span {
-  color: #ffffff;        /* cor diferente do MANA */
+  color: #ffffff;        
 }
 
 .logo-link {
@@ -30,11 +30,9 @@
 }
 
 .logo-link:hover {
-  transform: scale(1.1); /* aumenta suavemente no hover */
+  transform: scale(1.1); 
 }
 
-
-/* === BASE === */
 body {
   background-color: #ffe6e6;
   text-align: center;
@@ -43,14 +41,14 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
-/* === CABEÇALHO === */
+
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: clamp(1rem, 5vw, 3rem);
   margin-top: clamp(20px, 5vh, 60px);
-  flex-wrap: wrap; /* permite quebrar linha em telas pequenas */
+  flex-wrap: wrap; 
 }
 
 h1 {
@@ -74,7 +72,6 @@ h1 {
   transform: scaleX(-1);
 }
 
-/* === CORAÇÕES === */
 .hearts {
   display: flex;
   justify-content: center;
@@ -84,18 +81,17 @@ h1 {
 }
 
 .heart-box {
-  position: relative;           /* necessário pro input se posicionar dentro */
+  position: relative;           
   display: inline-block;
 }
 
 .heart-box img {
-  width: 500px;                 /* tamanho do coração */
+  width: 500px;                 
   height: auto;
   image-rendering: pixelated;
   display: block;
 }
 
-/* === INPUT SOBRE O CORAÇÃO === */
 .heart-box input {
   position: absolute;
   top: 50%;                     /* centraliza verticalmente */
@@ -119,8 +115,6 @@ h1 {
   box-shadow: 0 0 10px #ffb6c1;
 }
 
-
-/* === BOTÃO === */
 button {
   background-color: #ffd6d6;
   color: #b3003b;
@@ -142,7 +136,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
