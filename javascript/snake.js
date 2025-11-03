@@ -67,7 +67,7 @@ function draw() {
     snake.pop();
   }
 
-  // Desenha cobra
+  
   for (let i = 0; i < snake.length; i++) {
     let color = i === 0 ? "#00FFFF" : "#39FF14";
     drawRect(snake[i].x, snake[i].y, color);
