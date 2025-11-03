@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.querySelector('button');
   const inputs = document.querySelectorAll('.heart-box input');
 
-  let lastCombination = ''; // Guarda a última combinação usada
+  let lastCombination = ''; 
 
-  // Função para remover resultado
+ 
   function removeResult() {
     const existingResult = document.getElementById('result');
     if (existingResult) {
@@ -12,47 +12,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Clique nas caixas apaga resultado
+  
   inputs.forEach(input => {
     input.addEventListener('focus', removeResult);
   });
 
-  // Função para gerar valor final
+  
   function getFinalPercentage(names) {
-    // Regra especial
     if (names.includes('mariah') && names.includes('joao')) {
       return 100;
     }
     return Math.floor(Math.random() * 100) + 1;
   }
 
-  // Clique no botão calcula
   button.addEventListener('click', () => {
-    // Pega nomes e normaliza
+
     const names = Array.from(inputs).map(input => input.value.trim().toLowerCase());
 
-    // Verifica campos vazios
     if (names.some(name => name === '')) {
       alert('Por favor, preencha ambos os nomes!');
       return;
     }
 
-    // Ordena os nomes para tratar combinações iguais independente da ordem
+     combinações iguais independente da ordem
     const combinationKey = names.sort().join('+');
 
-    // Verifica se é a mesma combinação que a última
+    
     if (combinationKey === lastCombination) {
       alert('Você não pode repetir a mesma combinação imediatamente!');
       return;
     }
 
-    // Atualiza a última combinação
+    
     lastCombination = combinationKey;
 
-    // Remove resultado anterior
+    
     removeResult();
 
-    // Cria elemento de resultado
+    
     const result = document.createElement('div');
     result.id = 'result';
     document.body.appendChild(result);
@@ -73,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       zIndex: '1000'
     });
 
-    // Animação de suspense
+    
     const animationDuration = 1500; // 1.5 segundos
     const intervalTime = 50;
     let elapsed = 0;
