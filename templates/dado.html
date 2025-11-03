@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FEELING LUCKY</title>
 
-  <!-- Estilos (CSS interno) -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
@@ -16,9 +15,9 @@
     }
 
     header {
-  position: absolute;  /* permite posicionar livremente */
-  top: 20px;           /* distância do topo */
-  right: 20px;         /* distância da direita */
+  position: absolute;  
+  top: 20px;           
+  right: 20px;         
   text-align: right;
   font-family: VT323, 'monospace';
 }
@@ -27,7 +26,7 @@ header h1 {
   color: limegreen;
   font-size: 5em;
   line-height: 0.8em;
-  margin: 0;           /* remove margem extra */
+  margin: 0;           
   padding-top: 0%;
 }
 
@@ -49,7 +48,7 @@ header h1 span {
     }
 
     .logo-link:hover {
-        transform: scale(1.1); /* aumenta um pouco */
+        transform: scale(1.1); 
     }
 
     h1 {
@@ -82,7 +81,7 @@ header h1 span {
 
     @keyframes spin {
       0% { transform: rotate(0deg); }
-      100% { transform: rotate(1440deg); } /* 4 voltas */
+      100% { transform: rotate(1440deg); } 
     }
 
     #resultado {
@@ -120,7 +119,6 @@ header h1 span {
   <img id="dice" src="../asset/img/dice.png" alt="dice">
   <p id="resultado"></p>
 
-  <!-- Script (JS interno) -->
   <script>
     const dice = document.getElementById('dice');
     const btn = document.getElementById('rollBtn');
@@ -133,7 +131,6 @@ header h1 span {
       void dice.offsetWidth; // força reflow
       dice.classList.add('rolling');
       
-      // número aleatório de 1 a 20
       const numero = Math.floor(Math.random() * 20) + 1;
 
       dice.addEventListener('animationend', function mostrarResultado() {
