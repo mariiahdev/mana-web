@@ -9,7 +9,6 @@ function resizeCanvas() {
 resizeCanvas();
 
 
-// Atualiza tamanho em tempo real
 window.addEventListener('resize', resizeCanvas);
 
 
@@ -20,7 +19,7 @@ let drops = Array(columns).fill(1);
 
 
 function draw() {
-  // Fundo transparente cria rastro do efeito
+  
   ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -48,9 +47,8 @@ function updateDrops() {
 }
 
 
-// Atualiza colunas ao redimensionar
+
 window.addEventListener('resize', updateDrops);
 
 
-// Inicia a animação
 setInterval(draw, 35);
